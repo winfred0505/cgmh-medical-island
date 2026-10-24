@@ -1,0 +1,522 @@
+{
+  "title": "長庚醫療島 · 3D 微縮模型互動醫療城市",
+  "subtitle": "Chang Gung Medical Archipelago · Real-time 3D Interactive Medical City",
+  "version": "1.0.0",
+  "sourceUrl": "https://www.cgmh.org.tw/",
+  "updatedAt": "2026-10-24",
+  "islands": [
+    {
+      "id": "linkou",
+      "number": "01",
+      "name": "林口長庚總院島",
+      "eng": "Linkou Medical Center",
+      "tagline": "台灣最大旗艦醫學中心 · 急重症與尖端醫療樞紐",
+      "themeColor": "#005BAC",
+      "badgeColor": "#2196F3",
+      "axial": [0, 0],
+      "icon": "🏥",
+      "category": "旗艦醫學中心",
+      "realtime": {
+        "erWaitCount": 18,
+        "erWaitHospitalize": 24,
+        "erWaitIcu": 2,
+        "erStatus": "busy",
+        "erStatusText": "忙碌中 (綠黃警示)",
+        "todayAppointments": 12840,
+        "availableBeds": 142,
+        "shuttleActive": true
+      },
+      "pillars": [
+        {
+          "title": "質子暨放射治療中心",
+          "desc": "全台首座質子治療中心，高能量精準滅殺腫瘤細胞並保護周邊健康器官。",
+          "tag": "尖端癌症治療"
+        },
+        {
+          "title": "達文西機器人微創中心",
+          "desc": "突破數萬例微創手術，涵蓋胸腔、泌尿、一般外科等精密高難度術式。",
+          "tag": "精密手術"
+        },
+        {
+          "title": "急診與創傷重症中心",
+          "desc": "具備醫學中心等級停機坪，24小時跨科會診急救通道，守護重症傷患生機。",
+          "tag": "24H急救"
+        },
+        {
+          "title": "器官移植卓越團隊",
+          "desc": "心臟、肝臟、腎臟、肺臟多重器官移植中心，手術存活率居世界領先地位。",
+          "tag": "世界級移植"
+        }
+      ],
+      "quickLinks": [
+        {"name": "網路掛號", "url": "https://www.cgmh.org.tw/tw/Services/DeptList/3"},
+        {"name": "即時看診進度", "url": "https://www.cgmh.org.tw/tw/Services/Register/3"},
+        {"name": "質子中心專頁", "url": "https://www1.cgmh.org.tw/proton/index.html"}
+      ],
+      "modelType": "flagship_hospital"
+    },
+    {
+      "id": "taipei",
+      "number": "02",
+      "name": "台北長庚都會島",
+      "eng": "Taipei Branch Medical Island",
+      "tagline": "都會核心精緻醫療 · 婦幼與生殖醫學權威",
+      "themeColor": "#D81B60",
+      "badgeColor": "#F06292",
+      "axial": [1, -1],
+      "icon": "👶",
+      "category": "都會精緻分院",
+      "realtime": {
+        "erWaitCount": 6,
+        "erWaitHospitalize": 5,
+        "erWaitIcu": 0,
+        "erStatus": "normal",
+        "erStatusText": "正常運作",
+        "todayAppointments": 4200,
+        "availableBeds": 38,
+        "shuttleActive": true
+      },
+      "pillars": [
+        {
+          "title": "生殖醫學中心",
+          "desc": "高成功率試管嬰兒技術、胚胎著床前基因篩檢，造福無數少子化家庭。",
+          "tag": "生殖權威"
+        },
+        {
+          "title": "婦產暨兒童醫療群",
+          "desc": "提供從產前精準篩檢、溫柔生產到產後照護的一站式都會母嬰綠洲。",
+          "tag": "母嬰照護"
+        },
+        {
+          "title": "醫學美容與微整形",
+          "desc": "專業皮膚專科與整外醫師親診，結合醫學中心等級安全防護措施。",
+          "tag": "專業美醫"
+        }
+      ],
+      "quickLinks": [
+        {"name": "台北掛號系統", "url": "https://www.cgmh.org.tw/tw/Services/DeptList/1"},
+        {"name": "門診叫號即時查", "url": "https://www.cgmh.org.tw/tw/Services/Register/1"}
+      ],
+      "modelType": "urban_clinic"
+    },
+    {
+      "id": "keelung",
+      "number": "03",
+      "name": "基隆長庚情人湖島",
+      "eng": "Keelung & Lover's Lake Island",
+      "tagline": "東北角山海守護神 · 情人湖癌症卓越中心",
+      "themeColor": "#00897B",
+      "badgeColor": "#26A69A",
+      "axial": [1, 0],
+      "icon": "🌊",
+      "category": "山海卓越分院",
+      "realtime": {
+        "erWaitCount": 8,
+        "erWaitHospitalize": 9,
+        "erWaitIcu": 1,
+        "erStatus": "normal",
+        "erStatusText": "正常運作",
+        "todayAppointments": 3560,
+        "availableBeds": 56,
+        "shuttleActive": true
+      },
+      "pillars": [
+        {
+          "title": "情人湖癌症卓越中心",
+          "desc": "依山傍水的自然舒壓環境，融合身心靈輔導與現代多專科精準抗癌療法。",
+          "tag": "癌症卓越"
+        },
+        {
+          "title": "東北角急重症救護網",
+          "desc": "涵蓋基隆、瑞芳、貢寮與北海岸地區的海事與緊急醫療安全網。",
+          "tag": "區域急救"
+        },
+        {
+          "title": "社區整合照護體系",
+          "desc": "走入偏鄉部落與漁村，推動長者慢性病追蹤與基層巡迴醫療服務。",
+          "tag": "偏鄉守護"
+        }
+      ],
+      "quickLinks": [
+        {"name": "基隆院區掛號", "url": "https://www.cgmh.org.tw/tw/Services/DeptList/2"},
+        {"name": "情人湖院區專頁", "url": "https://www.cgmh.org.tw/tw/Systems/Area/2"}
+      ],
+      "modelType": "coastal_hospital"
+    },
+    {
+      "id": "taoyuan",
+      "number": "04",
+      "name": "桃園長庚中醫運動島",
+      "eng": "Taoyuan Branch & TCM Island",
+      "tagline": "中西醫整合旗艦 · 顱顏整形與運動醫學王國",
+      "themeColor": "#43A047",
+      "badgeColor": "#66BB6A",
+      "axial": [-1, 1],
+      "icon": "🌿",
+      "category": "特色專科分院",
+      "realtime": {
+        "erWaitCount": 3,
+        "erWaitHospitalize": 4,
+        "erWaitIcu": 0,
+        "erStatus": "normal",
+        "erStatusText": "舒緩流暢",
+        "todayAppointments": 2890,
+        "availableBeds": 65,
+        "shuttleActive": true
+      },
+      "pillars": [
+        {
+          "title": "長庚中醫藥臨床中心",
+          "desc": "全台規模最大的中西醫合璧醫療重鎮，推動中藥實證醫學與針灸臨床研發。",
+          "tag": "中西整合"
+        },
+        {
+          "title": "顱顏中心與羅慧夫唇顎裂團隊",
+          "desc": "享譽國際的顱顏畸形修復團隊，讓數萬名唇顎裂兒童重展自信微笑。",
+          "tag": "國際唇顎裂"
+        },
+        {
+          "title": "運動醫學與體能復健中心",
+          "desc": "專業國家級運動員指定防護照護體系，配備高階水中水療與肌力訓練場。",
+          "tag": "運動醫學"
+        }
+      ],
+      "quickLinks": [
+        {"name": "桃園院區掛號", "url": "https://www.cgmh.org.tw/tw/Services/DeptList/5"},
+        {"name": "中醫門診專屬查詢", "url": "https://www.cgmh.org.tw/tw/Services/Register/5"}
+      ],
+      "modelType": "tcm_rehab_center"
+    },
+    {
+      "id": "culture_village",
+      "number": "05",
+      "name": "長庚養生文化村島",
+      "eng": "Health & Culture Village",
+      "tagline": "活到老、學到老的優雅樂齡生活 · 台灣高齡銀髮標竿",
+      "themeColor": "#FB8C00",
+      "badgeColor": "#FFA726",
+      "axial": [-1, 0],
+      "icon": "🏡",
+      "category": "樂齡銀髮園區",
+      "realtime": {
+        "erWaitCount": 0,
+        "erWaitHospitalize": 0,
+        "erWaitIcu": 0,
+        "erStatus": "quiet",
+        "erStatusText": "悠閒樂活",
+        "residentCount": 1450,
+        "availableSuites": 32,
+        "activityOngoing": "銀髮陶藝與養生太極班"
+      },
+      "pillars": [
+        {
+          "title": "連續性銀髮照護體系",
+          "desc": "從健康自理老人住宅、護理之家到長照日照中心，打造無憂銀髮連續照護。",
+          "tag": "連續照護"
+        },
+        {
+          "title": "樂齡學院與多元社團",
+          "desc": "書法、園藝、高爾夫推桿、合唱團，讓退休長者持續揮灑生命熱情。",
+          "tag": "終身學習"
+        },
+        {
+          "title": "千坪自然森林步道與有機農園",
+          "desc": "擁有綠意盎然的環山健行步道與住戶專屬果菜園，享受大自然芬多精洗禮。",
+          "tag": "綠活生態"
+        }
+      ],
+      "quickLinks": [
+        {"name": "養生村官網介紹", "url": "https://www.cgmh.org.tw/tw/Systems/Area/H"},
+        {"name": "參觀預約諮詢", "url": "https://www.cgmh.org.tw/tw/Services/DeptList/H"}
+      ],
+      "modelType": "retirement_village"
+    },
+    {
+      "id": "kaohsiung",
+      "number": "06",
+      "name": "高雄長庚港都醫學島",
+      "eng": "Kaohsiung Medical Center",
+      "tagline": "南台灣醫學領航者 · 陳肇隆院士換肝傳奇世界奇蹟",
+      "themeColor": "#E64A19",
+      "badgeColor": "#FF7043",
+      "axial": [-1, 2],
+      "icon": "☀️",
+      "category": "南部核心醫學中心",
+      "realtime": {
+        "erWaitCount": 15,
+        "erWaitHospitalize": 19,
+        "erWaitIcu": 1,
+        "erStatus": "busy",
+        "erStatusText": "忙碌中",
+        "todayAppointments": 10520,
+        "availableBeds": 118,
+        "shuttleActive": true
+      },
+      "pillars": [
+        {
+          "title": "陳肇隆院士肝臟移植中心",
+          "desc": "完成亞洲首例成功活體肝臟移植，手術存活率高達98%，引領世界活體換肝技術。",
+          "tag": "活體換肝先驅"
+        },
+        {
+          "title": "高雄質子放射治療中心",
+          "desc": "南台灣首座高階質子治療中心，為南部與東部癌症病友提供免於舟車勞頓的尖端照射。",
+          "tag": "南部質子重鎮"
+        },
+        {
+          "title": "兒童醫學卓越中心",
+          "desc": "擁有南台灣最健全之兒童加護病房、罕見疾病治療團隊與重症急救專責醫師。",
+          "tag": "南區兒醫樞紐"
+        }
+      ],
+      "quickLinks": [
+        {"name": "高雄院區掛號", "url": "https://www.cgmh.org.tw/tw/Services/DeptList/8"},
+        {"name": "即時看診燈號", "url": "https://www.cgmh.org.tw/tw/Services/Register/8"}
+      ],
+      "modelType": "kaohsiung_center"
+    },
+    {
+      "id": "chiayi",
+      "number": "07",
+      "name": "嘉義長庚南院島",
+      "eng": "Chiayi Branch Medical Island",
+      "tagline": "雲嘉南平原的健康防護城 · 智慧遠距醫療先鋒",
+      "themeColor": "#FBC02D",
+      "badgeColor": "#FDD835",
+      "axial": [0, 2],
+      "icon": "🌾",
+      "category": "雲嘉南核心醫院",
+      "realtime": {
+        "erWaitCount": 7,
+        "erWaitHospitalize": 8,
+        "erWaitIcu": 1,
+        "erStatus": "normal",
+        "erStatusText": "良好運作",
+        "todayAppointments": 3980,
+        "availableBeds": 72,
+        "shuttleActive": true
+      },
+      "pillars": [
+        {
+          "title": "阿里山偏鄉遠距會診中心",
+          "desc": "運用5G超低延遲技術，與阿里山衛生所建立高解析醫療影像會診即時通道。",
+          "tag": "5G智慧遠距"
+        },
+        {
+          "title": "南區罕見疾病診斷治療",
+          "desc": "設置罕病照護專責病房與全方位營養支持系統，守護偏鄉弱勢罕病家庭。",
+          "tag": "罕病專責"
+        },
+        {
+          "title": "嘉義長庚產後與護理之家",
+          "desc": "平原寬闊採光視野，結合專科醫師巡房與護理團隊，提供頂級母嬰照護。",
+          "tag": "五星產後"
+        }
+      ],
+      "quickLinks": [
+        {"name": "嘉義院區掛號", "url": "https://www.cgmh.org.tw/tw/Services/DeptList/6"},
+        {"name": "看診進度即時查", "url": "https://www.cgmh.org.tw/tw/Services/Register/6"}
+      ],
+      "modelType": "chiayi_center"
+    },
+    {
+      "id": "yunlin",
+      "number": "08",
+      "name": "雲林長庚海線長照島",
+      "eng": "Yunlin Branch & Long-term Care",
+      "tagline": "風頭水尾的溫暖燈塔 · 麥寮沿海健康守護者",
+      "themeColor": "#7CB342",
+      "badgeColor": "#9CCC65",
+      "axial": [0, 1],
+      "icon": "⚓",
+      "category": "濱海社區長照醫院",
+      "realtime": {
+        "erWaitCount": 2,
+        "erWaitHospitalize": 3,
+        "erWaitIcu": 0,
+        "erStatus": "normal",
+        "erStatusText": "暢通正常",
+        "todayAppointments": 1250,
+        "availableBeds": 45,
+        "shuttleActive": true
+      },
+      "pillars": [
+        {
+          "title": "沿海社區與巡迴醫療車隊",
+          "desc": "配備高階超音波與血液分析儀器的巡迴醫療車，每週固定巡診沿海各偏僻村落。",
+          "tag": "巡迴醫療車"
+        },
+        {
+          "title": "住宿型長照機構",
+          "desc": "在地化優質高齡長照病床，減輕沿海青壯年人口外流之長輩照護負擔。",
+          "tag": "在地長照"
+        },
+        {
+          "title": "職業病防治與預防醫學中心",
+          "desc": "針對濱海石化園區與在地勞工提供完善的職業病早期篩檢與健康促進方案。",
+          "tag": "勞工健康"
+        }
+      ],
+      "quickLinks": [
+        {"name": "雲林院區掛號", "url": "https://www.cgmh.org.tw/tw/Services/DeptList/M"},
+        {"name": "長照機構介紹", "url": "https://www.cgmh.org.tw/tw/Systems/Area/M"}
+      ],
+      "modelType": "coastal_care"
+    },
+    {
+      "id": "smart_ai",
+      "number": "09",
+      "name": "長庚智慧醫療與生醫研發島",
+      "eng": "Smart Medical AI & Genomic Island",
+      "tagline": "AI運算樞紐 · 次世代基因定序與智慧醫院大腦",
+      "themeColor": "#7B1FA2",
+      "badgeColor": "#AB47BC",
+      "axial": [0, -1],
+      "icon": "🧠",
+      "category": "生醫智慧科技島",
+      "realtime": {
+        "aiModelsServing": 42,
+        "genomicAnalysesToday": 188,
+        "telehealthConsults": 320,
+        "serverStatus": "optimal",
+        "serverText": "算力滿載 · 穩定運作中"
+      },
+      "pillars": [
+        {
+          "title": "長庚醫療AI預測中心",
+          "desc": "研發敗血症早期預警、AI胸部X光即時判讀、眼底病變全自動偵測等數十項專案。",
+          "tag": "AI臨床輔助"
+        },
+        {
+          "title": "次世代基因體與幹細胞實驗室",
+          "desc": "推進精準癌症靶向用藥、再生醫學自體軟骨與細胞免疫療法研究。",
+          "tag": "精準基因體"
+        },
+        {
+          "title": "全體系雲端電子病歷互通中樞",
+          "desc": "跨全台各長庚院區零時差串聯，實現病患跨院就醫影像與檢驗無縫接軌。",
+          "tag": "雲端病歷"
+        }
+      ],
+      "quickLinks": [
+        {"name": "長庚醫訊科研專刊", "url": "https://www.cgmh.org.tw/cgmn/index.asp"},
+        {"name": "長庚智慧醫院創新", "url": "https://www.cgmh.org.tw/tw/Systems/About"}
+      ],
+      "modelType": "ai_tech_hub"
+    },
+    {
+      "id": "welfare",
+      "number": "10",
+      "name": "全人社服與公益守護島",
+      "eng": "Public Welfare & Social Service",
+      "tagline": "取之社會，用之社會 · 王永慶先生創業精神與善心關懷",
+      "themeColor": "#C2185B",
+      "badgeColor": "#EC407A",
+      "axial": [-2, 1],
+      "icon": "❤️",
+      "category": "公益關懷志工島",
+      "realtime": {
+        "monthlySubsidyCases": 1820,
+        "volunteerHours": 8940,
+        "childProtectionCases": 48,
+        "activeWelfareStatus": "愛心發放中"
+      },
+      "pillars": [
+        {
+          "title": "弱勢病患就醫醫療急難救助金",
+          "desc": "每年投入數億元公益基金，協助經濟弱勢家庭無力負擔高額手術與耗材費用的病友。",
+          "tag": "急難補助"
+        },
+        {
+          "title": "長庚兒少保護醫療支援中心",
+          "desc": "全國首創專責兒保小組，24小時通報處置，主動守護受虐與高風險家庭兒童。",
+          "tag": "兒少守護"
+        },
+        {
+          "title": "長庚身障畫家創作贊助與義展",
+          "desc": "長年聘任口足畫家與身障藝術家，全台院區長廊展出畫作，傳遞堅韌生命力。",
+          "tag": "口足畫家"
+        }
+      ],
+      "quickLinks": [
+        {"name": "長庚社服基金會", "url": "https://www.cgmh.org.tw/tw/SocialService/PublicWelfare"},
+        {"name": "身障畫家專區", "url": "https://www.cgmh.org.tw/tw/SocialService/PublicWelfare#8"}
+      ],
+      "modelType": "charity_sanctuary"
+    }
+  ],
+  "flows": [
+    {
+      "id": "F1",
+      "from": "yunlin",
+      "to": "linkou",
+      "label": "重症急轉通道",
+      "desc": "沿海嚴重外傷與複雜重症經直升機/高速救護車轉至林口醫學中心急救",
+      "color": "#FF5722",
+      "carrier": "ambulance"
+    },
+    {
+      "id": "F2",
+      "from": "linkou",
+      "to": "kaohsiung",
+      "label": "全台肝臟移植連線",
+      "desc": "北部林口與南部高雄肝臟移植團隊跨院配對與器官運送專線",
+      "color": "#E91E63",
+      "carrier": "organ_box"
+    },
+    {
+      "id": "F3",
+      "from": "linkou",
+      "to": "kaohsiung",
+      "label": "質子放療雙峰聯防",
+      "desc": "南北兩座質子中心臨床數據共享、照射療程跨區接軌與臨床試驗聯網",
+      "color": "#9C27B0",
+      "carrier": "data_packet"
+    },
+    {
+      "id": "F4",
+      "from": "taoyuan",
+      "to": "culture_village",
+      "label": "高齡醫養一條龍",
+      "desc": "桃園長庚復健水療與中醫調理直通常庚養生文化村住戶健康照護",
+      "color": "#4CAF50",
+      "carrier": "shuttle_bus"
+    },
+    {
+      "id": "F5",
+      "from": "smart_ai",
+      "to": "linkou",
+      "label": "AI即時影像判讀",
+      "desc": "智慧醫療算力中心向全院急診室即時串流AI骨折與胸部病灶熱區分析",
+      "color": "#3F51B5",
+      "carrier": "ai_stream"
+    },
+    {
+      "id": "F6",
+      "from": "smart_ai",
+      "to": "chiayi",
+      "label": "阿里山5G遠距會診",
+      "desc": "超低延遲視訊與遠端生醫儀器數據傳輸，突破偏鄉山區地形限制",
+      "color": "#00BCD4",
+      "carrier": "data_packet"
+    },
+    {
+      "id": "F7",
+      "from": "welfare",
+      "to": "keelung",
+      "label": "偏鄉弱勢義診資助",
+      "desc": "長庚愛心公益基金持續挹注基隆與東北角沿海弱勢家庭免費用藥與照護",
+      "color": "#E91E63",
+      "carrier": "heart_care"
+    },
+    {
+      "id": "F8",
+      "from": "taipei",
+      "to": "linkou",
+      "label": "大台北雙院通勤接駁",
+      "desc": "台北長庚與林口長庚每10分鐘一班院際免費高乘載巡迴接駁巴士",
+      "color": "#009688",
+      "carrier": "shuttle_bus"
+    }
+  ]
+}

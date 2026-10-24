@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>長庚醫療島 · 3D 微縮模型即時互動醫療城市 | Chang Gung Medical Archipelago</title>
+  <meta name="description" content="以六角形微縮玩具模型島嶼建構的長庚醫療財團法人即時資訊互動城市。涵蓋林口、台北、基隆、桃園、養生文化村、高雄、嘉義、雲林等全台院區即時急診、看診進度與尖端醫療導覽。">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./css/cgmh_style.css">
+
+  <!-- Three.js ESM Import Map (採用現代 ESM 架構) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- 3D 渲染畫布容器 -->
+  <div id="webgl-container"></div>
+
+  <!-- 初始啟動載入遮罩 -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-box">
+      <div class="loading-logo">🏥</div>
+      <h2>長庚醫療島</h2>
+      <p>正在組裝 3D 微縮模型醫療城市與即時網絡…</p>
+    </div>
+  </div>
+
+  <!-- 上層互動 UI 遮罩層 -->
+  <div class="ui-layer">
+    <!-- 頂部抬頭與控制列 -->
+    <header class="top-bar">
+      <div class="brand-card">
+        <div class="brand-eyebrow">CHANG GUNG MEDICAL ARCHIPELAGO · 3D TOY DIORAMA</div>
+        <h1>
+          長庚醫療島
+          <span class="tag">即時互動城市</span>
+        </h1>
+        <p class="brand-desc">10座六角微縮醫療小島，串聯急重症轉診通道、質子治療、換肝奇蹟與高齡長照網絡。</p>
+        <div class="ticker-bar">
+          <span class="ticker-dot"></span>
+          <span id="ticker-text">長庚醫療全球體系：全台各院區門診正常叫號，救護車與跨院接駁專車巡迴運作中</span>
+        </div>
+      </div>
+
+      <div class="controls-group">
+        <!-- 晝夜晨昏光影切換 -->
+        <div class="time-selector" aria-label="晝夜晨昏時段切換">
+          <button class="time-tab" data-time="dawn" title="切換為晨曦金黃">🌅 晨曦</button>
+          <button class="time-tab active" data-time="day" title="切換為正午陽光">☀️ 正午</button>
+          <button class="time-tab" data-time="dusk" title="切換為黃昏夕陽">🌇 黃昏</button>
+          <button class="time-tab" data-time="night" title="切換為溫馨夜景">🌙 幽夜</button>
+        </div>
+
+        <!-- 視角與功能工具按鈕 -->
+        <nav class="toolbar" aria-label="地圖操作工具">
+          <button id="btn-overview" class="tool-btn" title="恢復全局俯瞰視角">
+            <span>❖ 全景</span>
+          </button>
+          <button id="btn-orbit" class="tool-btn" title="切換環島慢速巡航旋轉">
+            <span>⟳ 巡航</span>
+          </button>
+          <button id="btn-flows" class="tool-btn active" title="顯示或隱藏醫療協作光脈線">
+            <span>☍ 協作流</span>
+          </button>
+          <button id="btn-er-radar" class="tool-btn highlight" title="檢視全院急診即時擁擠度雷達">
+            <span>🚑 即時急診</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 底部微縮小島快速導航 Dock -->
+    <div class="dock-container">
+      <nav class="dock" id="island-dock" aria-label="各院區小島導航"></nav>
+    </div>
+  </div>
+
+  <!-- 右側選取院區即時資訊抽屜卡片 -->
+  <aside class="card-panel" id="hospital-card" aria-label="院區即時醫療詳情">
+    <div class="card-header">
+      <div>
+        <span class="card-category" id="card-category">旗艦醫學中心</span>
+        <h2 id="card-title">林口長庚總院島</h2>
+      </div>
+      <button class="card-close-btn" id="card-close" title="關閉卡片">✕</button>
+    </div>
+
+    <p class="card-tagline" id="card-tagline"></p>
+
+    <!-- 即時醫療數據看板 -->
+    <div class="card-stats" id="card-stats"></div>
+
+    <!-- 核心醫療特色與技術柱 -->
+    <div class="card-section-title">
+      <span>✦ 核心重點醫療中心</span>
+    </div>
+    <div class="card-pillars" id="card-pillars"></div>
+
+    <!-- 官方系統快速深層連結 -->
+    <div class="card-section-title">
+      <span>🔗 長庚官方即時服務</span>
+    </div>
+    <div class="card-links" id="card-links"></div>
+  </aside>
+
+  <!-- 全院急診即時雷達彈窗 (ER Radar Modal) -->
+  <div class="modal-overlay" id="er-modal" hidden style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🚑 全台長庚體系 · 即時急診與就醫動態雷達</h3>
+        <button class="card-close-btn" id="er-modal-close" title="關閉雷達">✕</button>
+      </div>
+      <div class="modal-body" id="er-list"></div>
+    </div>
+  </div>
+
+  <!-- 應用程式主邏輯 -->
+  <script type="module" src="./js/cgmh_app.js"></script>
+</body>
+</html>
